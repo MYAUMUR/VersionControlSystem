@@ -58,6 +58,20 @@ class SVCS(private val args: Array<String>) {
             (args.size == 1) -> {
                 if (index.readText().isEmpty()) {
                     println("Add a file to the index.")
+                } else {
+                    println("""
+                        Tracked files:
+                        ${index.readLines().joinToString()}
+                    """.trimIndent())
+                }
+            }
+
+            (args.size > 1) -> {
+                if (root.resolve(args[1]).exists()) {
+                    index.appendText("\n" + args[1])
+                    println("The file '${args[1]}' is tracked.")
+                } else {
+                    println("Can't find '${args[1]}'.")
                 }
             }
         }
