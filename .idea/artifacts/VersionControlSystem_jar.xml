@@ -1,0 +1,10 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="VersionControlSystem:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/VersionControlSystem_jar</output-path>
+    <root id="archive" name="VersionControlSystem.jar">
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/Version Control System/task/test/META-INF/MANIFEST.MF" />
+      </element>
+    </root>
+  </artifact>
+</component>
